@@ -104,7 +104,8 @@
         const gitlabApiParams = {
           order_by: 'last_activity_at',
           // GitLab per_page max is 100. We use > 100 values as next page follow trigger
-          per_page: fetchCount > 100 ? 100 : fetchCount
+          per_page: fetchCount > 100 ? 100 : fetchCount,
+          owned: true
         }
 
         const visibility = Config.root.projectVisibility
